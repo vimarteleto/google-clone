@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+
+        // Função para mecanismo de pesquisa do Google
+        function pesquisa() {
+            var linkPesquisa = ("https://www.google.com/search?q="+ (document.getElementById("texto-pesquisa").value))
+            document.getElementById("pesquisar").setAttribute("href", linkPesquisa);      
+        }
+
+    </script>
+</head>
+<body>
+
+    <header>
+        <nav class="nav-superior">
+            <a href="https://mail.google.com/" class="menu-superior">Gmail</a>
+            <a href="https://www.google.com/imghp?hl=pt-pt" class="menu-superior">Imagens</a>
+            <a href="https://accounts.google.com/signin/v2/identifier?hl=pt-BR&passive=true&continue=https%3A%2F%2Fwww.google.com%2F&ec=GAZAmgQ&flowName=GlifWebSignIn&flowEntry=ServiceLogin">
+                <button class="botao-login">Fazer login</button>
+            </a>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="logotipo">
+            <div class="imagem">
+            <img src='https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png'
+            alt="Logo do Google">
+            </div>
+        </div>
+
+        <form class="input-pesquisa">
+               
+            <button id="lupa"></button>     
+            <input id="texto-pesquisa" type="text">    
+            <button id="mic"></button>        
+            
+        </form> 
+
+        <div class="botoes">        
+            <a id="pesquisar" ><button class="botao-pesquisa" onclick="pesquisa()">Pesquisa Google</button></a>
+            <a><button class="botao-pesquisa" onclick="pesquisa()">Estou com sorte</button></a>       
+        </div>  
+        
+
+    </main>
+
+    <footer>
+        <div class="pais">Brasil</div>    
+        <div class="rodape">
+            <nav class="menu-esq">
+                <a href="https://about.google/?utm_source=google-BR&utm_medium=referral&utm_campaign=hp-footer&fg=1">Sobre</a>
+                <a href="https://ads.google.com/intl/en_br/home/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Publicidade</a>
+                <a href="https://smallbusiness.withgoogle.com/intl/pt-BR_br/help/#!/">Negócios</a>
+                <a href="https://www.google.com/search/howsearchworks/?fg=1">Como funciona a Pesquisa</a>            
+            </nav>
+
+            <nav class="menu-dir">
+                <a href="https://policies.google.com/privacy?hl=en-BR&fg=1">Privacidade</a>
+                <a href="https://policies.google.com/terms?hl=en-BR&fg=1">Termos</a>
+                <a href="#">Configurações</a>                
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
